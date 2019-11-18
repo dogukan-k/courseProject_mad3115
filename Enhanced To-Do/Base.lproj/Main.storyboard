@@ -51,6 +51,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="00p-g2-8wy" id="qdF-os-95N"/>
+                        <segue destination="isf-Ze-GXP" kind="show" identifier="editItem" id="PSI-kY-l1w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -67,10 +68,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="FuW-lI-0KR"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pDR-hD-pt0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPn-CO-BxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="824"/>
+            <point key="canvasLocation" x="1039" y="927"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EIf-Pq-46a">
