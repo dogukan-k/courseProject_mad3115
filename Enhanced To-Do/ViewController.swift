@@ -28,7 +28,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         loadItems() ;
     }
     
-    //Convert the boolean value to opposite  and save 
+    //Convert the boolean value to opposite  and save
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
          tableView.deselectRow(at: indexPath, animated: true);
@@ -37,6 +37,10 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
                
                saveItems();
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+           return true;
+       }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,6 +60,8 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
                
                return cell ;
      }
+    
+    
     
     
     func saveItems(){
