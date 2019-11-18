@@ -17,6 +17,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="h0a-DW-GMJ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FMD-Jm-w9a"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YsL-Ut-qLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,6 +69,7 @@
                     <connections>
                         <outlet property="tableView" destination="00p-g2-8wy" id="qdF-os-95N"/>
                         <segue destination="isf-Ze-GXP" kind="show" identifier="editItem" id="PSI-kY-l1w"/>
+                        <segue destination="6Pf-nj-fcR" kind="show" identifier="addItem" id="EGR-0r-8Sg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
