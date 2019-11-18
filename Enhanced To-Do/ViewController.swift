@@ -23,6 +23,10 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadItems() ;
+    }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
