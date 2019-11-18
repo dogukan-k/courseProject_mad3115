@@ -27,6 +27,16 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     override func viewWillAppear(_ animated: Bool) {
         loadItems() ;
     }
+    
+    //Convert the boolean value to opposite  and save 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+         tableView.deselectRow(at: indexPath, animated: true);
+               
+               itemsList[indexPath.row].completed = !itemsList[indexPath.row].completed
+               
+               saveItems();
+    }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
