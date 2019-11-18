@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
  
-    //xcdatamodeld uzantili yerde tanimladigimiz Item listi olusturuyoruz.
+    //xcdatamodeld items will be stored at that
     var itemsList = [Items]() ;
+    
+    //Context will used as container that keeps persistence data
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -36,7 +42,34 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
                
                return cell ;
      }
-     
+    
+    
+    func saveItems(){
+
+        do {
+            try context.save();
+        }
+        catch
+        {
+            print("\(error)")
+        }
+        tableView.reloadData();
+    }
+    
+    func loadItems(){
+        
+        let request : NSFetchRequest<Items> = Items.fetchRequest();
+        
+        
+        do{
+        itemsList = try context.fetch(request)
+        }
+        catch{
+            print("\(error)")
+        }
+
+        tableView.reloadData();
+    }
 
 }
 
