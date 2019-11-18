@@ -41,6 +41,27 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
            return true;
        }
+    
+    //Delete action of rows
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if(editingStyle == .delete){
+            let item = itemsList[indexPath.row];
+            
+            itemsList.remove(at: indexPath.row);
+            context.delete(item);
+            
+            do{
+                try context.save();
+            }
+            catch{
+                print("\(error) ")
+            }
+            tableView.deleteRows(at: [indexPath], with: .automatic);
+        }
+        
+        
+    }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
