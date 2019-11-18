@@ -57,6 +57,21 @@
             </objects>
             <point key="canvasLocation" x="1040.5797101449275" y="136.60714285714286"/>
         </scene>
+        <!--Edit Item View Controller-->
+        <scene sceneID="9wC-5x-EvP">
+            <objects>
+                <viewController id="isf-Ze-GXP" customClass="EditItemViewController" customModule="Enhanced_To_Do" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eRd-ku-w7t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="FuW-lI-0KR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPn-CO-BxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="824"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="EIf-Pq-46a">
             <objects>
