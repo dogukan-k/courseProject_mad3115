@@ -20,6 +20,8 @@ class AddItemController: UIViewController {
       var itemPriority:Double = 1;
       var color = "00F900";
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext ;
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +64,17 @@ class AddItemController: UIViewController {
     @IBAction func btnSave(_ sender: UIButton) {
         
         
+    }
+    
+    func saveItems(){
+        
+        do {
+            try context.save();
+        }
+        catch
+        {
+            print("\(error)")
+        }
     }
 
  
