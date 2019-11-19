@@ -66,7 +66,7 @@ class AddItemController: UIViewController {
         
        
         
-        if(txtField.text != nil){
+        if(txtField.text != ""){
                  
                  let newItem = Items(context: self.context);
                  newItem.name = txtField.text;
@@ -83,6 +83,22 @@ class AddItemController: UIViewController {
                  navigationController?.popViewController(animated: true)
                  self.dismiss(animated: true, completion: nil);
              }
+        
+        else{
+                  //Alert fill item name
+                  let alert = UIAlertController(title: "Please Enter To-Do", message: "", preferredStyle: .alert);
+                  alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor.darkGray
+                  alert.view.tintColor = UIColor.white
+                             
+                             let okAction = UIAlertAction(title: "Ok", style: .default) { (okAction) in
+                                 alert.dismiss(animated: true, completion: nil) ;
+                                 
+                                
+                             }
+                             
+                             alert.addAction(okAction);
+                             present(alert, animated: true, completion: nil);
+              }
         
         
     }
