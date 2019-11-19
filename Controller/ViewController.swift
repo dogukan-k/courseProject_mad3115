@@ -20,6 +20,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     @IBOutlet weak var tableView: UITableView!
     var pushedIndex = 0 ;
     var itemListCountBeforeDeleting = 0 ;
+    var shakeGesturePermission = true ;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -203,7 +204,12 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
 
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?){
         
-             performSegue(withIdentifier: "addItem", sender: nil);
+            
+        if(shakeGesturePermission == true){
+            
+               performSegue(withIdentifier: "addItem", sender: nil);
+        }
+          
         
     }
     

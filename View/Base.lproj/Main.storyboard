@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHF-xs-gGw">
-                                <rect key="frame" x="40" y="738" width="295" height="40"/>
+                                <rect key="frame" x="40" y="689" width="295" height="40"/>
                                 <color key="backgroundColor" red="0.042277872568379331" green="0.095460943193080447" blue="0.16070732822272982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                                 <state key="normal" title="Save">
@@ -125,7 +125,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="00p-g2-8wy">
-                                <rect key="frame" x="0.0" y="128" width="375" height="650"/>
+                                <rect key="frame" x="0.0" y="128" width="375" height="601"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -155,8 +155,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="To-Do" id="HO3-BT-U9d">
                         <barButtonItem key="backBarButtonItem" title="To-Do" id="2D8-rT-uDW"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="settings" id="EHt-Ze-f4A" userLabel="btnSettings"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eOq-Pz-SRv">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -164,6 +166,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="00p-g2-8wy" id="qdF-os-95N"/>
                         <segue destination="6Pf-nj-fcR" kind="show" identifier="addItem" id="EGR-0r-8Sg"/>
@@ -211,7 +214,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6T-Lh-bmb">
-                                <rect key="frame" x="40" y="738" width="295" height="40"/>
+                                <rect key="frame" x="40" y="689" width="295" height="40"/>
                                 <color key="backgroundColor" red="0.04227787257" green="0.095460943189999994" blue="0.1607073282" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                                 <state key="normal" title="Update">
@@ -317,5 +320,6 @@
         <image name="navImge" width="331" height="41"/>
         <image name="orangeDot" width="81" height="81"/>
         <image name="purpleDot" width="81" height="81"/>
+        <image name="settings" width="30" height="30"/>
     </resources>
 </document>
