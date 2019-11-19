@@ -19,13 +19,16 @@ class EditItemViewController: UIViewController {
     
     //Will be deterdmined according to incoming item
     var itemPriority:Double = 0;
-    var color = "";
+    
     
      var incomingItem : Items? = nil
+    var color = "";
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext ;
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.color = incomingItem!.strColor! ;
         
         if(incomingItem!.strColor == "00F900"){
              btnLow.blink();
@@ -42,6 +45,7 @@ class EditItemViewController: UIViewController {
         
         txtField.text = incomingItem!.name;
         datePicker.date = incomingItem!.itemDate!;
+        
     }
     
        @IBAction func btnLowPriority(_ sender: UIButton) {
@@ -78,11 +82,28 @@ class EditItemViewController: UIViewController {
     
     @IBAction func btnSave(_ sender: UIButton) {
         
+        
+        let alertSuccesful = UIAlertController(title: "Item Updated", message: "", preferredStyle: .alert);
+            alertSuccesful.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor.darkGray
+            alertSuccesful.view.tintColor = UIColor.white
+                       
+            let ok = UIAlertAction(title: "Ok", style: .default) { (UIAlertAction) in
+                  
+            alertSuccesful.dismiss(animated: true) {
+          
+                  //Go back to main page
+                  self.navigationController?.popViewController(animated: true)
+                  self.dismiss(animated: true, completion: nil);
+                           }
+                       }
+        
         incomingItem!.name = txtField.text
         incomingItem!.itemDate = datePicker.date;
         incomingItem!.strColor = color ;
         incomingItem!.priority = itemPriority ;
         self.saveItems();
+        alertSuccesful.addAction(ok);
+        present(alertSuccesful, animated: true, completion: nil);
         
     }
     

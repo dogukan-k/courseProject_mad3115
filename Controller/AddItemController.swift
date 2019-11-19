@@ -20,7 +20,7 @@ class AddItemController: UIViewController {
       var itemPriority:Double = 1;
       var color = "00F900";
     
-    var itemsList = [Items]() ;
+
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext ;
     
 
@@ -90,7 +90,7 @@ class AddItemController: UIViewController {
                  newItem.strColor = color;
                  
                  
-                 self.itemsList.append(newItem);
+               
                  self.saveItems();
             
                  alertSuccesful.addAction(ok);
@@ -133,4 +133,17 @@ class AddItemController: UIViewController {
 
 }
 
+//extension UIView{
+//    func blink() {
+//        self.alpha = 0.2
+//        UIView.animate(withDuration: 1, delay: 0.5, options: [.curveLinear, .repeat, .autoreverse], animations: {self.alpha = 1.0}, completion: nil)
+//    }
+//}
+//
+//extension UIView{
+//    func stopBlink() {
+//        self.alpha = 1
+//        self.layer.removeAllAnimations()
+//    }
+//}
 

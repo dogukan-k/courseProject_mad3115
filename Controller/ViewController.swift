@@ -19,15 +19,21 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
 
     @IBOutlet weak var tableView: UITableView!
     var pushedIndex = 0 ;
+    var itemListCountBeforeDeleting = 0 ;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+      
+       
     }
     
+    //Order the itemlist according to their priority
     override func viewWillAppear(_ animated: Bool) {
         loadItems() ;
-        print(itemsList.count)
+        itemsList.sort { $0.priority > $1.priority }
+        tableView.reloadData();
     }
     
     //Convert the boolean value to opposite  and save
@@ -50,16 +56,22 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         if(editingStyle == .delete){
             let item = itemsList[indexPath.row];
             
+            itemListCountBeforeDeleting = itemsList.count;
+            
             itemsList.remove(at: indexPath.row);
             context.delete(item);
             
+            
             do{
+                
                 try context.save();
             }
             catch{
                 print("\(error) ")
             }
+        
             tableView.deleteRows(at: [indexPath], with: .automatic);
+            
         }
         
         
@@ -95,9 +107,13 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
      }
     
     
-    //When swipe cell , roundstyle gone so , swipped cell should be reloaded at the end of editing
+    //When swipe cell , roundstyle gone so , swipped cell should be reloaded at the end of editing if not deleted
     func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
-        tableView.reloadRows(at: [indexPath!], with: .none)
+        if(itemListCountBeforeDeleting == itemsList.count){
+            
+              tableView.reloadRows(at: [indexPath!], with: .none)
+        }
+      
     }
     
     
