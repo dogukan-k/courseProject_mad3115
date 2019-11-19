@@ -39,6 +39,9 @@ class EditItemViewController: UIViewController {
         else{
              btnHigh.blink();
         }
+        
+        txtField.text = incomingItem!.name;
+        datePicker.date = incomingItem!.itemDate!;
     }
     
        @IBAction func btnLowPriority(_ sender: UIButton) {
@@ -75,6 +78,11 @@ class EditItemViewController: UIViewController {
     
     @IBAction func btnSave(_ sender: UIButton) {
         
+        incomingItem!.name = txtField.text
+        incomingItem!.itemDate = datePicker.date;
+        incomingItem!.strColor = color ;
+        incomingItem!.priority = itemPriority ;
+        self.saveItems();
         
     }
     
