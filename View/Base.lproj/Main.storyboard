@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHF-xs-gGw">
-                                <rect key="frame" x="40" y="822" width="428" height="456"/>
+                                <rect key="frame" x="40" y="822" width="334" height="40"/>
                                 <color key="backgroundColor" red="0.042277872568379331" green="0.095460943193080447" blue="0.16070732822272982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                                 <state key="normal" title="Save">
@@ -55,7 +55,7 @@
                                 </subviews>
                             </stackView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="QmR-91-u0B">
-                                <rect key="frame" x="40" y="503" width="428" height="120"/>
+                                <rect key="frame" x="40" y="503" width="334" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="tAc-lg-b3v"/>
                                 </constraints>
@@ -192,6 +192,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSave:" destination="5TM-5L-d0Y" eventType="touchUpInside" id="lZB-ur-gfX"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Vaz-vC-wzd">
                                 <rect key="frame" x="50" y="423" width="314" height="50"/>
@@ -203,6 +206,9 @@
                                             <constraint firstAttribute="height" constant="50" id="Oxc-Kq-gFv"/>
                                         </constraints>
                                         <state key="normal" image="greenDot"/>
+                                        <connections>
+                                            <action selector="btnLowPriority:" destination="5TM-5L-d0Y" eventType="touchUpInside" id="hYX-v0-D6e"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ze-4H-u80" userLabel="btn_purple">
                                         <rect key="frame" x="132" y="0.0" width="50" height="50"/>
@@ -213,6 +219,9 @@
                                         <state key="normal" image="purpleDot">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnMidPriority:" destination="5TM-5L-d0Y" eventType="touchUpInside" id="Dzc-f0-pqt"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ete-D4-izo" userLabel="btn_orange">
                                         <rect key="frame" x="264" y="0.0" width="50" height="50"/>
@@ -221,6 +230,9 @@
                                             <constraint firstAttribute="height" constant="50" id="oYz-3L-OSJ"/>
                                         </constraints>
                                         <state key="normal" image="orangeDot"/>
+                                        <connections>
+                                            <action selector="btnHighPriority:" destination="5TM-5L-d0Y" eventType="touchUpInside" id="srr-Bh-lmb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -261,6 +273,13 @@
                         <viewLayoutGuide key="safeArea" id="MJc-aj-WQI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Item" id="UkV-Ps-Ofs"/>
+                    <connections>
+                        <outlet property="btnHigh" destination="ete-D4-izo" id="ZEa-Nx-wvq"/>
+                        <outlet property="btnLow" destination="zPe-B2-Xph" id="gWR-Wc-tgI"/>
+                        <outlet property="btnMid" destination="0ze-4H-u80" id="SX1-LZ-buQ"/>
+                        <outlet property="datePicker" destination="QGF-eS-b3D" id="a0m-hZ-yhg"/>
+                        <outlet property="txtField" destination="EDJ-2O-Ne9" id="jo4-4b-Ne3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GX4-mF-Wjj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

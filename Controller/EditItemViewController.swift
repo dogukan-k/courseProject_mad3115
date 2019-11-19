@@ -10,22 +10,35 @@ import UIKit
 
 class EditItemViewController: UIViewController {
 
+    @IBOutlet weak var txtField: UITextField!
+    @IBOutlet weak var btnLow: UIButton!
+    @IBOutlet weak var btnMid: UIButton!
+    @IBOutlet weak var btnHigh: UIButton!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btnLowPriority(_ sender: UIButton) {
+    
     }
-    */
+    
+    @IBAction func btnMidPriority(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func btnHighPriority(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func btnSave(_ sender: UIButton) {
+        
+        
+    }
 
 }
 
