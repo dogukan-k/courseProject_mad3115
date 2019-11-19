@@ -28,3 +28,18 @@ class EditItemViewController: UIViewController {
     */
 
 }
+
+extension UIView{
+    func blink() {
+        self.alpha = 0.2
+        UIView.animate(withDuration: 1, delay: 0.5, options: [.curveLinear, .repeat, .autoreverse], animations: {self.alpha = 1.0}, completion: nil)
+    }
+}
+
+extension UIView{
+    func stopBlink() {
+        self.alpha = 1
+        self.layer.removeAllAnimations()
+    }
+}
+
