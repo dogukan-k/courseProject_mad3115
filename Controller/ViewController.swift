@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
-   //d
+  
     //xcdatamodeld items will be stored at that
     var itemsList = [Items]() ;
     

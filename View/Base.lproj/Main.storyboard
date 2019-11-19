@@ -95,7 +95,19 @@
                     <view key="view" contentMode="scaleToFill" id="eRd-ku-w7t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hUA-Ci-tvM">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hUA-Ci-tvM" secondAttribute="height" multiplier="40:27" id="CrH-iZ-Hjn"/>
+                                </constraints>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hUA-Ci-tvM" firstAttribute="centerY" secondItem="eRd-ku-w7t" secondAttribute="centerY" id="Rzo-CO-sdf"/>
+                            <constraint firstItem="hUA-Ci-tvM" firstAttribute="centerX" secondItem="eRd-ku-w7t" secondAttribute="centerX" id="kww-ie-PYG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FuW-lI-0KR"/>
                     </view>
                     <navigationItem key="navigationItem" title="To-Do Edit" id="pDR-hD-pt0"/>
