@@ -79,12 +79,25 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
                cell.textLabel?.text = item.name ;
                cell.accessoryType = item.completed ? .checkmark : .none
                cell.accessoryView?.tintColor = .white
+               cell.layer.cornerRadius = 25 ;
+               cell.layer.masksToBounds = true
+              
+               cell.layer.borderColor = UIColor.darkGray.cgColor
+               cell.layer.borderWidth = 10
+        
                //Background color of cell is up to type of item
-               cell.backgroundColor = UIColor.init(named: item.strColor!);
-         
+               cell.backgroundColor = UIColor.init(hexString: item.strColor!);
+        
+            
                
                return cell ;
      }
+    
+    
+    //When swipe cell , roundstyle gone so , swipped cell should be reloaded at the end of editing
+    func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        tableView.reloadRows(at: [indexPath!], with: .none)
+    }
     
     
     
@@ -135,20 +148,25 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     //Edit item
         func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
        
-      
-        let closeAction = UIContextualAction(style: .normal, title:  "Edit", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+    
+        let closeAction = UIContextualAction(style: .destructive, title:  "Edit", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             
             self.performSegue(withIdentifier: "editItem", sender: nil);
            
             success(true)
-        })
         
+          
+        })
+            
+              
         closeAction.backgroundColor = .brown
-       
+           
        
         return UISwipeActionsConfiguration(actions: [closeAction])
 
     }
+    
+    
     
 }
 
@@ -163,9 +181,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             cleanedHexString = String(hexString.dropFirst())
         }
         
-        // String -> UInt32
-        var rgbValue: UInt32 = 0
-        Scanner(string: cleanedHexString).scanHexInt32(&rgbValue)
+        // String -> UInt64
+        var rgbValue: UInt64 = 0
+        Scanner(string: cleanedHexString).scanHexInt64(&rgbValue)
         
         // UInt32 -> R,G,B
         let red = CGFloat((rgbValue >> 16) & 0xff) / 255.0
@@ -176,4 +194,6 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     }
     
 }
+
+
 
