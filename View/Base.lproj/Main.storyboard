@@ -21,10 +21,19 @@
                                     <constraint firstAttribute="width" secondItem="QmR-91-u0B" secondAttribute="height" multiplier="40:27" id="FT7-Hj-upm"/>
                                 </constraints>
                             </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mQu-GY-cCx" userLabel="txt_item">
+                                <rect key="frame" x="47" y="246" width="320" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="QmR-91-u0B" firstAttribute="top" relation="lessThanOrEqual" secondItem="mQu-GY-cCx" secondAttribute="bottom" constant="60" id="13P-Ll-Iae"/>
+                            <constraint firstItem="mQu-GY-cCx" firstAttribute="width" secondItem="QmR-91-u0B" secondAttribute="width" id="9RZ-1b-PGr"/>
+                            <constraint firstItem="QmR-91-u0B" firstAttribute="top" secondItem="mQu-GY-cCx" secondAttribute="bottom" constant="60" id="QVQ-YS-OOi"/>
                             <constraint firstItem="QmR-91-u0B" firstAttribute="centerY" secondItem="YFI-R3-Olh" secondAttribute="centerY" id="pMw-0p-bFL"/>
+                            <constraint firstItem="mQu-GY-cCx" firstAttribute="centerX" secondItem="QmR-91-u0B" secondAttribute="centerX" id="sqH-sO-rX0"/>
                             <constraint firstItem="QmR-91-u0B" firstAttribute="centerX" secondItem="YFI-R3-Olh" secondAttribute="centerX" id="zrE-ek-B4U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h0a-DW-GMJ"/>
@@ -33,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YsL-Ut-qLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="-628"/>
+            <point key="canvasLocation" x="1071.0144927536232" y="-628.125"/>
         </scene>
         <!--To-Do-->
         <scene sceneID="tne-QT-ifu">
