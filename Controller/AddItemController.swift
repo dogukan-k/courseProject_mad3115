@@ -20,6 +20,7 @@ class AddItemController: UIViewController {
       var itemPriority:Double = 1;
       var color = "00F900";
     
+    var itemsList = [Items]() ;
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext ;
     
 
@@ -62,6 +63,26 @@ class AddItemController: UIViewController {
     }
     
     @IBAction func btnSave(_ sender: UIButton) {
+        
+       
+        
+        if(txtField.text != nil){
+                 
+                 let newItem = Items(context: self.context);
+                 newItem.name = txtField.text;
+                 newItem.completed = false ;
+                 newItem.priority = itemPriority ;
+                 newItem.itemDate = datePicker.date;
+                 newItem.strColor = color;
+                 
+                 
+                 self.itemsList.append(newItem);
+                 self.saveItems();
+          
+                 //Go back to main page
+                 navigationController?.popViewController(animated: true)
+                 self.dismiss(animated: true, completion: nil);
+             }
         
         
     }
