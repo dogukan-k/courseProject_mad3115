@@ -168,6 +168,8 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         
         
     }
+    
+    
     @IBAction func addNewItemButton(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "addItem", sender: nil);
     }
@@ -192,6 +194,17 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
        
         return UISwipeActionsConfiguration(actions: [closeAction])
 
+    }
+    
+    //To enable shake gesture
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?){
+        
+             performSegue(withIdentifier: "addItem", sender: nil);
+        
     }
     
     

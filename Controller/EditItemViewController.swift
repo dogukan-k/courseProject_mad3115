@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditItemViewController: UIViewController {
+class EditItemViewController: UIViewController , UITextFieldDelegate{
 
     @IBOutlet weak var txtField: UITextField!
     @IBOutlet weak var btnLow: UIButton!
@@ -27,6 +27,11 @@ class EditItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(EditItemViewController.viewTapped(gestureRecognnizer:))) ;
+               view.addGestureRecognizer(tapGesture);
+               
+               self.txtField.delegate = self;
         
         self.color = incomingItem!.strColor! ;
         self.itemPriority = incomingItem!.priority ;
@@ -118,6 +123,18 @@ class EditItemViewController: UIViewController {
              print("\(error)")
          }
      }
+    
+    //When tapped rather than keyboard , keyboard will closed
+      @objc func viewTapped(gestureRecognnizer : UITapGestureRecognizer){
+
+             view.endEditing(true);
+         }
+      
+      //return button will close the keyboard
+      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+          self.view.endEditing(true)
+          return false
+      }
 
 }
 
