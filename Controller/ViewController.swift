@@ -128,6 +128,24 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         performSegue(withIdentifier: "addItem", sender: nil);
     }
     
+    //Edit item
+        func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+       
+      
+        let closeAction = UIContextualAction(style: .normal, title:  "Edit", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            
+            self.performSegue(withIdentifier: "editItem", sender: nil);
+           
+            success(true)
+        })
+        
+        closeAction.backgroundColor = .brown
+       
+       
+        return UISwipeActionsConfiguration(actions: [closeAction])
+
+    }
+    
 }
 
     //Custom Colors
