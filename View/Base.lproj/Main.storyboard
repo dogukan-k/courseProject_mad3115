@@ -94,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YsL-Ut-qLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071.0144927536232" y="-628.53260869565224"/>
+            <point key="canvasLocation" x="1038" y="-583"/>
         </scene>
         <!--To-Do-->
         <scene sceneID="tne-QT-ifu">
@@ -141,50 +141,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="00p-g2-8wy" id="qdF-os-95N"/>
-                        <segue destination="isf-Ze-GXP" kind="show" identifier="editItem" id="PSI-kY-l1w"/>
                         <segue destination="6Pf-nj-fcR" kind="show" identifier="addItem" id="EGR-0r-8Sg"/>
+                        <segue destination="5TM-5L-d0Y" kind="show" identifier="editItem" id="CYA-kI-BH8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1040.5797101449275" y="136.60714285714286"/>
-        </scene>
-        <!--To-Do Edit-->
-        <scene sceneID="9wC-5x-EvP">
-            <objects>
-                <viewController id="isf-Ze-GXP" customClass="EditItemViewController" customModule="Enhanced_To_Do" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eRd-ku-w7t">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hUA-Ci-tvM">
-                                <rect key="frame" x="47" y="340" width="414" height="216"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="hUA-Ci-tvM" secondAttribute="height" multiplier="40:27" id="CrH-iZ-Hjn"/>
-                                </constraints>
-                            </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4i-Ro-5um" userLabel="txt_item">
-                                <rect key="frame" x="47" y="246" width="320" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="hUA-Ci-tvM" firstAttribute="top" relation="lessThanOrEqual" secondItem="G4i-Ro-5um" secondAttribute="bottom" constant="60" id="Dvp-Kt-Jb9"/>
-                            <constraint firstItem="hUA-Ci-tvM" firstAttribute="centerY" secondItem="eRd-ku-w7t" secondAttribute="centerY" id="Rzo-CO-sdf"/>
-                            <constraint firstItem="hUA-Ci-tvM" firstAttribute="top" secondItem="G4i-Ro-5um" secondAttribute="bottom" constant="60" id="hEE-Eo-A0y"/>
-                            <constraint firstItem="G4i-Ro-5um" firstAttribute="centerX" secondItem="hUA-Ci-tvM" secondAttribute="centerX" id="iBN-sS-Ikp"/>
-                            <constraint firstItem="hUA-Ci-tvM" firstAttribute="centerX" secondItem="eRd-ku-w7t" secondAttribute="centerX" id="kww-ie-PYG"/>
-                            <constraint firstItem="G4i-Ro-5um" firstAttribute="width" secondItem="hUA-Ci-tvM" secondAttribute="width" id="sVA-ao-rOA"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="FuW-lI-0KR"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="To-Do Edit" id="pDR-hD-pt0"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oPn-CO-BxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1037.68115942029" y="926.78571428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EIf-Pq-46a">
@@ -213,6 +176,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCf-ox-OI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+        <!--Edit Item-->
+        <scene sceneID="gcZ-Sm-YzE">
+            <objects>
+                <viewController id="5TM-5L-d0Y" customClass="EditItemViewController" customModule="Enhanced_To_Do" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8i8-oZ-W2s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6T-Lh-bmb">
+                                <rect key="frame" x="40" y="822" width="334" height="40"/>
+                                <color key="backgroundColor" red="0.04227787257" green="0.095460943189999994" blue="0.1607073282" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Vaz-vC-wzd">
+                                <rect key="frame" x="50" y="423" width="314" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPe-B2-Xph" userLabel="btn_green">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="3XU-d6-4ou"/>
+                                            <constraint firstAttribute="height" constant="50" id="Oxc-Kq-gFv"/>
+                                        </constraints>
+                                        <state key="normal" image="greenDot"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ze-4H-u80" userLabel="btn_purple">
+                                        <rect key="frame" x="132" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="dmC-b3-msx"/>
+                                            <constraint firstAttribute="width" constant="50" id="iwV-jD-aSK"/>
+                                        </constraints>
+                                        <state key="normal" image="purpleDot">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ete-D4-izo" userLabel="btn_orange">
+                                        <rect key="frame" x="264" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="54g-C5-26P"/>
+                                            <constraint firstAttribute="height" constant="50" id="oYz-3L-OSJ"/>
+                                        </constraints>
+                                        <state key="normal" image="orangeDot"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="QGF-eS-b3D">
+                                <rect key="frame" x="40" y="503" width="334" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="8fd-cJ-aWg"/>
+                                </constraints>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDJ-2O-Ne9" userLabel="txt_item">
+                                <rect key="frame" x="40" y="289" width="334" height="34"/>
+                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EDJ-2O-Ne9" secondAttribute="height" multiplier="167:17" id="A6t-Ym-CZf"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MJc-aj-WQI" firstAttribute="trailing" secondItem="j6T-Lh-bmb" secondAttribute="trailing" constant="40" id="8FO-zP-TrR"/>
+                            <constraint firstItem="Vaz-vC-wzd" firstAttribute="centerX" secondItem="8i8-oZ-W2s" secondAttribute="centerX" id="8nU-S5-SQQ"/>
+                            <constraint firstItem="j6T-Lh-bmb" firstAttribute="leading" secondItem="MJc-aj-WQI" secondAttribute="leading" constant="40" id="HIs-G2-qwW"/>
+                            <constraint firstItem="QGF-eS-b3D" firstAttribute="leading" secondItem="MJc-aj-WQI" secondAttribute="leading" constant="40" id="IaI-OQ-lyt"/>
+                            <constraint firstItem="MJc-aj-WQI" firstAttribute="trailing" secondItem="EDJ-2O-Ne9" secondAttribute="trailing" constant="40" id="WHH-uF-cFo"/>
+                            <constraint firstItem="EDJ-2O-Ne9" firstAttribute="leading" secondItem="MJc-aj-WQI" secondAttribute="leading" constant="40" id="bXf-vN-dTO"/>
+                            <constraint firstItem="MJc-aj-WQI" firstAttribute="trailing" secondItem="QGF-eS-b3D" secondAttribute="trailing" constant="40" id="bkx-Nl-Xla"/>
+                            <constraint firstItem="QGF-eS-b3D" firstAttribute="top" secondItem="Vaz-vC-wzd" secondAttribute="bottom" constant="30" id="cgY-su-YAr"/>
+                            <constraint firstItem="Vaz-vC-wzd" firstAttribute="leading" relation="lessThanOrEqual" secondItem="MJc-aj-WQI" secondAttribute="leading" constant="50" id="dC1-zN-Udp"/>
+                            <constraint firstItem="MJc-aj-WQI" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Vaz-vC-wzd" secondAttribute="trailing" constant="50" id="fVR-ap-8Ok"/>
+                            <constraint firstItem="j6T-Lh-bmb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QGF-eS-b3D" secondAttribute="bottom" constant="10" id="iFO-ex-Eof"/>
+                            <constraint firstItem="Vaz-vC-wzd" firstAttribute="top" secondItem="EDJ-2O-Ne9" secondAttribute="bottom" constant="100" id="nN5-Kr-w0u"/>
+                            <constraint firstItem="Vaz-vC-wzd" firstAttribute="centerY" secondItem="8i8-oZ-W2s" secondAttribute="centerY" id="qnc-8v-cYF"/>
+                            <constraint firstItem="MJc-aj-WQI" firstAttribute="bottom" secondItem="j6T-Lh-bmb" secondAttribute="bottom" id="vV2-RL-arU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MJc-aj-WQI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Item" id="UkV-Ps-Ofs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GX4-mF-Wjj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="898"/>
         </scene>
     </scenes>
     <resources>
