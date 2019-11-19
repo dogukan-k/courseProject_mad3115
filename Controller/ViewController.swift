@@ -26,6 +26,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     override func viewWillAppear(_ animated: Bool) {
         loadItems() ;
+        print(itemsList.count)
     }
     
     //Convert the boolean value to opposite  and save
@@ -72,9 +73,12 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
            let cell = tableView.dequeueReusableCell(withIdentifier: "Item", for: indexPath);
                let item = itemsList[indexPath.row];
                
-        
+               cell.textLabel!.font = UIFont(name:"Bradley Hand", size:22)
+               cell.textLabel!.textColor = .white ;
+               cell.textLabel!.textAlignment = .center
                cell.textLabel?.text = item.name ;
                cell.accessoryType = item.completed ? .checkmark : .none
+               cell.accessoryView?.tintColor = .white
                //Background color of cell is up to type of item
                cell.backgroundColor = UIColor.init(named: item.strColor!);
          

@@ -125,8 +125,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="00p-g2-8wy">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="128" width="375" height="650"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Item" id="ty4-Bx-4lD">
@@ -135,6 +136,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ty4-Bx-4lD" id="9xA-Xa-47J">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -149,7 +151,7 @@
                             <constraint firstItem="00p-g2-8wy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="F3F-FP-L6r"/>
                             <constraint firstItem="00p-g2-8wy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hri-dh-wtE"/>
                             <constraint firstItem="00p-g2-8wy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JFe-d5-RWH"/>
-                            <constraint firstItem="00p-g2-8wy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kRf-vW-LVG"/>
+                            <constraint firstItem="00p-g2-8wy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="kRf-vW-LVG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -170,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040.5797101449275" y="136.60714285714286"/>
+            <point key="canvasLocation" x="1039.2" y="135.96059113300493"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EIf-Pq-46a">
