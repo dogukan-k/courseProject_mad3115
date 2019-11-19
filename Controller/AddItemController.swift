@@ -14,6 +14,7 @@ class AddItemController: UIViewController , UITextFieldDelegate{
     @IBOutlet weak var btnLow: UIButton!
     @IBOutlet weak var btnMid: UIButton!
     @IBOutlet weak var btnHigh: UIButton!
+    @IBOutlet weak var btnSave: UIButton!
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
@@ -31,6 +32,7 @@ class AddItemController: UIViewController , UITextFieldDelegate{
         view.addGestureRecognizer(tapGesture);
         
         self.txtField.delegate = self;
+        btnSave.layer.cornerRadius = 8
 
         // Do any additional setup after loading the view.
     }

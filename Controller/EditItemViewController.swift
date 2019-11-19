@@ -14,6 +14,7 @@ class EditItemViewController: UIViewController , UITextFieldDelegate{
     @IBOutlet weak var btnLow: UIButton!
     @IBOutlet weak var btnMid: UIButton!
     @IBOutlet weak var btnHigh: UIButton!
+    @IBOutlet weak var btnUpdate: UIButton!
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
@@ -32,6 +33,10 @@ class EditItemViewController: UIViewController , UITextFieldDelegate{
                view.addGestureRecognizer(tapGesture);
                
                self.txtField.delegate = self;
+        
+        
+        btnUpdate.layer.cornerRadius = 8 
+       
         
         self.color = incomingItem!.strColor! ;
         self.itemPriority = incomingItem!.priority ;
