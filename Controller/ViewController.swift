@@ -21,6 +21,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     var pushedIndex = 0 ;
     var itemListCountBeforeDeleting = 0 ;
     var shakeGesturePermission = true ;
+    var dateAlertPermission = true ;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,7 +106,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
                //Background color of cell is up to type of item
                cell.backgroundColor = UIColor.init(hexString: item.strColor!);
         
-        if(item.itemDate! < now && item.completed == false){
+        if(item.itemDate! < now && item.completed == false && dateAlertPermission == true){
             cell.backgroundColor = .red
         }
             
@@ -167,6 +168,15 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             vc.incomingItem = itemsList[pushedIndex]
         }
         
+        if(segue.identifier == "settings"){
+            let vc = segue.destination as! SettingsViewController;
+            vc.viewController = self
+            vc.incomingAlertInfo = self.dateAlertPermission ;
+            vc.incomingShakeInfo = self.shakeGesturePermission ;
+            
+            
+        }
+        
         
     }
     
@@ -213,6 +223,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         
     }
     
+    @IBAction func settingsButton(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "settings", sender: nil);
+    }
     
     
 }

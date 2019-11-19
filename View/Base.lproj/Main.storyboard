@@ -158,7 +158,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="To-Do" id="HO3-BT-U9d">
                         <barButtonItem key="backBarButtonItem" title="To-Do" id="2D8-rT-uDW"/>
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="settings" id="EHt-Ze-f4A" userLabel="btnSettings"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="settings" id="EHt-Ze-f4A" userLabel="btnSettings">
+                            <connections>
+                                <action selector="settingsButton:" destination="BYZ-38-t0r" id="xt9-Rv-dsj"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eOq-Pz-SRv">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -226,6 +230,10 @@
                         <viewLayoutGuide key="safeArea" id="uXi-XT-5OP"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zc8-g4-2sF"/>
+                    <connections>
+                        <outlet property="alertS" destination="eSP-Iy-pKa" id="J7R-BD-66G"/>
+                        <outlet property="shakeS" destination="JiT-JA-Wol" id="TMp-SR-RgK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cec-2j-5gM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
