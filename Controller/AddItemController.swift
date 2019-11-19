@@ -64,6 +64,20 @@ class AddItemController: UIViewController {
     
     @IBAction func btnSave(_ sender: UIButton) {
         
+        let alertSuccesful = UIAlertController(title: "New To-Do Item Saved", message: "", preferredStyle: .alert);
+        alertSuccesful.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor.darkGray
+        alertSuccesful.view.tintColor = UIColor.white
+                 
+        let ok = UIAlertAction(title: "Ok", style: .default) { (UIAlertAction) in
+            
+            alertSuccesful.dismiss(animated: true) {
+    
+            //Go back to main page
+            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil);
+                     }
+                 }
+                     
        
         
         if(txtField.text != ""){
@@ -78,10 +92,11 @@ class AddItemController: UIViewController {
                  
                  self.itemsList.append(newItem);
                  self.saveItems();
+            
+                 alertSuccesful.addAction(ok);
+                 present(alertSuccesful, animated: true, completion: nil);
           
-                 //Go back to main page
-                 navigationController?.popViewController(animated: true)
-                 self.dismiss(animated: true, completion: nil);
+                 
              }
         
         else{
