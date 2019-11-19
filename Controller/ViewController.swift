@@ -111,7 +111,23 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
 
         tableView.reloadData();
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "addItem"){
+            
+        }
+        
+        if(segue.identifier == "editItem"){
+            
+        }
+        
+        
+    }
+    @IBAction func addNewItemButton(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "addItem", sender: nil);
+    }
+    
 }
 
     //Custom Colors

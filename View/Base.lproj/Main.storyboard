@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9sg-lZ-5cK">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="6Pf-nj-fcR" customClass="AddItemController" customModule="Enhanced_To_Do" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YFI-R3-Olh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHF-xs-gGw">
-                                <rect key="frame" x="40" y="822" width="334" height="40"/>
+                                <rect key="frame" x="40" y="738" width="295" height="40"/>
                                 <color key="backgroundColor" red="0.042277872568379331" green="0.095460943193080447" blue="0.16070732822272982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                                 <state key="normal" title="Save">
@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="RYM-Nz-57Y">
-                                <rect key="frame" x="50" y="423" width="314" height="50"/>
+                                <rect key="frame" x="50" y="381" width="275" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0z-Gq-p8w" userLabel="btn_green">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -41,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTT-uu-Hpa" userLabel="btn_purple">
-                                        <rect key="frame" x="132" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="112.66666666666666" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="npR-fh-F96"/>
                                             <constraint firstAttribute="height" constant="50" id="w8o-8I-myU"/>
@@ -54,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-za-v6h" userLabel="btn_orange">
-                                        <rect key="frame" x="264" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="225" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="JQo-n3-Mr2"/>
                                             <constraint firstAttribute="width" constant="50" id="nGX-8t-3RF"/>
@@ -67,14 +67,15 @@
                                 </subviews>
                             </stackView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="QmR-91-u0B">
-                                <rect key="frame" x="40" y="503" width="334" height="120"/>
+                                <rect key="frame" x="40" y="461" width="295" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="tAc-lg-b3v"/>
                                 </constraints>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mQu-GY-cCx" userLabel="txt_item">
-                                <rect key="frame" x="40" y="289" width="334" height="34"/>
+                                <rect key="frame" x="40" y="251" width="295" height="30"/>
                                 <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mQu-GY-cCx" secondAttribute="height" multiplier="167:17" id="q7R-8E-Eys"/>
                                 </constraints>
@@ -120,19 +121,19 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Enhanced_To_Do" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="00p-g2-8wy">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Item" id="ty4-Bx-4lD">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ty4-Bx-4lD" id="9xA-Xa-47J">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -156,6 +157,9 @@
                         <barButtonItem key="backBarButtonItem" title="To-Do" id="2D8-rT-uDW"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eOq-Pz-SRv">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addNewItemButton:" destination="BYZ-38-t0r" id="HN5-2E-o5T"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -174,7 +178,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9sg-lZ-5cK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" shadowImage="navImge" id="kNV-vd-8Wx">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -201,11 +205,11 @@
             <objects>
                 <viewController id="5TM-5L-d0Y" customClass="EditItemViewController" customModule="Enhanced_To_Do" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8i8-oZ-W2s">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6T-Lh-bmb">
-                                <rect key="frame" x="40" y="822" width="334" height="40"/>
+                                <rect key="frame" x="40" y="738" width="295" height="40"/>
                                 <color key="backgroundColor" red="0.04227787257" green="0.095460943189999994" blue="0.1607073282" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                                 <state key="normal" title="Save">
@@ -216,7 +220,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Vaz-vC-wzd">
-                                <rect key="frame" x="50" y="423" width="314" height="50"/>
+                                <rect key="frame" x="50" y="381" width="275" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPe-B2-Xph" userLabel="btn_green">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -230,7 +234,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ze-4H-u80" userLabel="btn_purple">
-                                        <rect key="frame" x="132" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="112.66666666666666" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="dmC-b3-msx"/>
                                             <constraint firstAttribute="width" constant="50" id="iwV-jD-aSK"/>
@@ -243,7 +247,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ete-D4-izo" userLabel="btn_orange">
-                                        <rect key="frame" x="264" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="225" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="54g-C5-26P"/>
                                             <constraint firstAttribute="height" constant="50" id="oYz-3L-OSJ"/>
@@ -256,14 +260,15 @@
                                 </subviews>
                             </stackView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="QGF-eS-b3D">
-                                <rect key="frame" x="40" y="503" width="334" height="120"/>
+                                <rect key="frame" x="40" y="461" width="295" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="8fd-cJ-aWg"/>
                                 </constraints>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDJ-2O-Ne9" userLabel="txt_item">
-                                <rect key="frame" x="40" y="289" width="334" height="34"/>
+                                <rect key="frame" x="40" y="251" width="295" height="30"/>
                                 <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EDJ-2O-Ne9" secondAttribute="height" multiplier="167:17" id="A6t-Ym-CZf"/>
                                 </constraints>
