@@ -21,10 +21,24 @@ class EditItemViewController: UIViewController {
     var itemPriority:Double = 0;
     var color = "";
     
+     var incomingItem : Items? = nil
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext ;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if(incomingItem!.strColor == "00F900"){
+             btnLow.blink();
+        }
+        
+        else if(incomingItem?.strColor == "7A81FF"){
+             btnMid.blink();
+        }
         // Do any additional setup after loading the view.
+        
+        else{
+             btnHigh.blink();
+        }
     }
     
        @IBAction func btnLowPriority(_ sender: UIButton) {
@@ -63,6 +77,17 @@ class EditItemViewController: UIViewController {
         
         
     }
+    
+    func saveItems(){
+         
+         do {
+             try context.save();
+         }
+         catch
+         {
+             print("\(error)")
+         }
+     }
 
 }
 

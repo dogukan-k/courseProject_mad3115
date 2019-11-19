@@ -18,6 +18,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     @IBOutlet weak var tableView: UITableView!
+    var pushedIndex = 0 ;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,12 +132,16 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        
+        
         if(segue.identifier == "addItem"){
             
         }
         
         if(segue.identifier == "editItem"){
+            let vc = segue.destination as! EditItemViewController;
             
+            vc.incomingItem = itemsList[pushedIndex]
         }
         
         
@@ -148,6 +153,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     //Edit item
         func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
        
+            pushedIndex = indexPath.row;
     
         let closeAction = UIContextualAction(style: .destructive, title:  "Edit", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             
