@@ -111,11 +111,20 @@
                                     <constraint firstAttribute="width" secondItem="hUA-Ci-tvM" secondAttribute="height" multiplier="40:27" id="CrH-iZ-Hjn"/>
                                 </constraints>
                             </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4i-Ro-5um" userLabel="txt_item">
+                                <rect key="frame" x="47" y="246" width="320" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hUA-Ci-tvM" firstAttribute="top" relation="lessThanOrEqual" secondItem="G4i-Ro-5um" secondAttribute="bottom" constant="60" id="Dvp-Kt-Jb9"/>
                             <constraint firstItem="hUA-Ci-tvM" firstAttribute="centerY" secondItem="eRd-ku-w7t" secondAttribute="centerY" id="Rzo-CO-sdf"/>
+                            <constraint firstItem="hUA-Ci-tvM" firstAttribute="top" secondItem="G4i-Ro-5um" secondAttribute="bottom" constant="60" id="hEE-Eo-A0y"/>
+                            <constraint firstItem="G4i-Ro-5um" firstAttribute="centerX" secondItem="hUA-Ci-tvM" secondAttribute="centerX" id="iBN-sS-Ikp"/>
                             <constraint firstItem="hUA-Ci-tvM" firstAttribute="centerX" secondItem="eRd-ku-w7t" secondAttribute="centerX" id="kww-ie-PYG"/>
+                            <constraint firstItem="G4i-Ro-5um" firstAttribute="width" secondItem="hUA-Ci-tvM" secondAttribute="width" id="sVA-ao-rOA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FuW-lI-0KR"/>
                     </view>
@@ -123,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPn-CO-BxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="927"/>
+            <point key="canvasLocation" x="1037.68115942029" y="926.78571428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EIf-Pq-46a">
