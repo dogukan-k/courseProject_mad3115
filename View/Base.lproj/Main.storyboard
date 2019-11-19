@@ -22,6 +22,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSave:" destination="6Pf-nj-fcR" eventType="touchUpInside" id="0uC-pD-F1c"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="RYM-Nz-57Y">
                                 <rect key="frame" x="50" y="423" width="314" height="50"/>
@@ -33,6 +36,9 @@
                                             <constraint firstAttribute="width" constant="50" id="dL6-Ap-ia1"/>
                                         </constraints>
                                         <state key="normal" image="greenDot"/>
+                                        <connections>
+                                            <action selector="btnLowPriority:" destination="6Pf-nj-fcR" eventType="touchUpInside" id="nHV-bu-bHc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTT-uu-Hpa" userLabel="btn_purple">
                                         <rect key="frame" x="132" y="0.0" width="50" height="50"/>
@@ -43,6 +49,9 @@
                                         <state key="normal" image="purpleDot">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnMidPriority:" destination="6Pf-nj-fcR" eventType="touchUpInside" id="QdB-nC-yB1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-za-v6h" userLabel="btn_orange">
                                         <rect key="frame" x="264" y="0.0" width="50" height="50"/>
@@ -51,6 +60,9 @@
                                             <constraint firstAttribute="width" constant="50" id="nGX-8t-3RF"/>
                                         </constraints>
                                         <state key="normal" image="orangeDot"/>
+                                        <connections>
+                                            <action selector="btnHighPriority:" destination="6Pf-nj-fcR" eventType="touchUpInside" id="ix3-kC-eb8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -91,6 +103,13 @@
                         <viewLayoutGuide key="safeArea" id="h0a-DW-GMJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="FMD-Jm-w9a"/>
+                    <connections>
+                        <outlet property="btnHigh" destination="Rzw-za-v6h" id="tR7-QO-Hjp"/>
+                        <outlet property="btnLow" destination="z0z-Gq-p8w" id="utO-OF-jTa"/>
+                        <outlet property="btnMid" destination="ZTT-uu-Hpa" id="RN6-WD-g6a"/>
+                        <outlet property="datePicker" destination="QmR-91-u0B" id="Ek5-zh-uMA"/>
+                        <outlet property="txtField" destination="mQu-GY-cCx" id="I9D-MR-gVo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YsL-Ut-qLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
