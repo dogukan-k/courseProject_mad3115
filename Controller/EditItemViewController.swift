@@ -17,21 +17,45 @@ class EditItemViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    //Will be deterdmined according to incoming item
+    var itemPriority:Double = 0;
+    var color = "";
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func btnLowPriority(_ sender: UIButton) {
-    
+       @IBAction func btnLowPriority(_ sender: UIButton) {
+        
+               btnHigh.stopBlink();
+               btnMid.stopBlink();
+               btnLow.blink();
+               
+               itemPriority = 1 ;
+               color = "00F900"
     }
     
     @IBAction func btnMidPriority(_ sender: UIButton) {
         
+             btnHigh.stopBlink();
+             btnLow.stopBlink();
+             btnMid.blink();
+             
+             itemPriority = 2 ;
+             color = "7A81FF"
+        
     }
     
     @IBAction func btnHighPriority(_ sender: UIButton) {
+        
+              btnLow.stopBlink();
+              btnMid.stopBlink()
+              btnHigh.blink();
+              
+              itemPriority = 3 ;
+              color = "FF9300"
         
     }
     
