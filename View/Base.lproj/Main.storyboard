@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9sg-lZ-5cK">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="6Pf-nj-fcR" customClass="AddItemController" customModule="Enhanced_To_Do" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YFI-R3-Olh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHF-xs-gGw">
-                                <rect key="frame" x="40" y="689" width="295" height="40"/>
+                                <rect key="frame" x="40" y="415" width="240" height="16"/>
                                 <color key="backgroundColor" red="0.042277872568379331" green="0.095460943193080447" blue="0.16070732822272982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                                 <state key="normal" title="Save">
@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="RYM-Nz-57Y">
-                                <rect key="frame" x="50" y="381" width="275" height="50"/>
+                                <rect key="frame" x="50" y="215" width="220" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0z-Gq-p8w" userLabel="btn_green">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -41,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTT-uu-Hpa" userLabel="btn_purple">
-                                        <rect key="frame" x="112.66666666666666" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="85" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="npR-fh-F96"/>
                                             <constraint firstAttribute="height" constant="50" id="w8o-8I-myU"/>
@@ -54,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-za-v6h" userLabel="btn_orange">
-                                        <rect key="frame" x="225" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="170" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="JQo-n3-Mr2"/>
                                             <constraint firstAttribute="width" constant="50" id="nGX-8t-3RF"/>
@@ -67,13 +67,13 @@
                                 </subviews>
                             </stackView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="QmR-91-u0B">
-                                <rect key="frame" x="40" y="461" width="295" height="120"/>
+                                <rect key="frame" x="40" y="295" width="240" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="tAc-lg-b3v"/>
                                 </constraints>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mQu-GY-cCx" userLabel="txt_item">
-                                <rect key="frame" x="40" y="251" width="295" height="30"/>
+                                <rect key="frame" x="40" y="90.5" width="240" height="24.5"/>
                                 <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -83,22 +83,31 @@
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose priority(Green is the least important)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5X-cG-anO">
+                                <rect key="frame" x="16" y="150" width="288" height="17.5"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="k5X-cG-anO" firstAttribute="top" secondItem="mQu-GY-cCx" secondAttribute="bottom" constant="35" id="4CY-7Q-VOD"/>
                             <constraint firstItem="RYM-Nz-57Y" firstAttribute="centerY" secondItem="YFI-R3-Olh" secondAttribute="centerY" id="79C-tz-Ztr"/>
+                            <constraint firstItem="h0a-DW-GMJ" firstAttribute="trailing" secondItem="k5X-cG-anO" secondAttribute="trailing" constant="16" id="BGu-8z-1rr"/>
                             <constraint firstItem="QmR-91-u0B" firstAttribute="leading" secondItem="h0a-DW-GMJ" secondAttribute="leading" constant="40" id="NhK-gR-tps"/>
                             <constraint firstItem="h0a-DW-GMJ" firstAttribute="trailing" secondItem="qHF-xs-gGw" secondAttribute="trailing" constant="40" id="Ojj-Hd-nlA"/>
                             <constraint firstItem="mQu-GY-cCx" firstAttribute="leading" secondItem="h0a-DW-GMJ" secondAttribute="leading" constant="40" id="OsL-VM-RVO"/>
                             <constraint firstItem="QmR-91-u0B" firstAttribute="top" secondItem="RYM-Nz-57Y" secondAttribute="bottom" constant="30" id="YI2-iy-5Ln"/>
                             <constraint firstItem="h0a-DW-GMJ" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="RYM-Nz-57Y" secondAttribute="trailing" constant="50" id="akm-Wl-XaB"/>
-                            <constraint firstItem="qHF-xs-gGw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QmR-91-u0B" secondAttribute="bottom" constant="10" id="bB4-UM-Jsl"/>
+                            <constraint firstItem="qHF-xs-gGw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QmR-91-u0B" secondAttribute="bottom" id="bB4-UM-Jsl"/>
                             <constraint firstItem="RYM-Nz-57Y" firstAttribute="top" secondItem="mQu-GY-cCx" secondAttribute="bottom" constant="100" id="fBz-xr-8XR"/>
                             <constraint firstItem="RYM-Nz-57Y" firstAttribute="centerX" secondItem="YFI-R3-Olh" secondAttribute="centerX" id="hmH-NO-BW6"/>
                             <constraint firstItem="h0a-DW-GMJ" firstAttribute="trailing" secondItem="QmR-91-u0B" secondAttribute="trailing" constant="40" id="oa9-Ra-2Oa"/>
                             <constraint firstItem="h0a-DW-GMJ" firstAttribute="bottom" secondItem="qHF-xs-gGw" secondAttribute="bottom" id="pPY-5a-ssT"/>
                             <constraint firstItem="qHF-xs-gGw" firstAttribute="leading" secondItem="h0a-DW-GMJ" secondAttribute="leading" constant="40" id="r9C-6M-4Mf"/>
                             <constraint firstItem="RYM-Nz-57Y" firstAttribute="leading" relation="lessThanOrEqual" secondItem="h0a-DW-GMJ" secondAttribute="leading" constant="50" id="sUl-SG-iYg"/>
+                            <constraint firstItem="k5X-cG-anO" firstAttribute="leading" secondItem="h0a-DW-GMJ" secondAttribute="leading" constant="16" id="x4N-of-k7f"/>
                             <constraint firstItem="h0a-DW-GMJ" firstAttribute="trailing" secondItem="mQu-GY-cCx" secondAttribute="trailing" constant="40" id="zBD-DT-4om"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h0a-DW-GMJ"/>
@@ -114,27 +123,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YsL-Ut-qLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="-583"/>
+            <point key="canvasLocation" x="1037.5999999999999" y="-583.00492610837443"/>
         </scene>
         <!--To-Do-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Enhanced_To_Do" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="00p-g2-8wy">
-                                <rect key="frame" x="0.0" y="128" width="375" height="601"/>
+                                <rect key="frame" x="0.0" y="84" width="320" height="347"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Item" id="ty4-Bx-4lD">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ty4-Bx-4lD" id="9xA-Xa-47J">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
@@ -187,29 +196,29 @@
             <objects>
                 <viewController id="E41-EI-11u" customClass="SettingsViewController" customModule="Enhanced_To_Do" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uht-bg-uDl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake Gesture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSV-fa-VmO">
-                                <rect key="frame" x="16" y="138" width="128" height="25"/>
+                                <rect key="frame" x="16" y="94" width="128" height="25"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JiT-JA-Wol" userLabel="shakeSwitch">
-                                <rect key="frame" x="184" y="135" width="51" height="31"/>
+                                <rect key="frame" x="184" y="91" width="51" height="31"/>
                                 <connections>
                                     <action selector="shakeGestureSwitch:" destination="E41-EI-11u" eventType="valueChanged" id="PY3-tj-hB9"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To-Do Alert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsq-Y8-lol">
-                                <rect key="frame" x="16" y="193" width="98" height="25"/>
+                                <rect key="frame" x="16" y="149" width="98" height="25"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eSP-Iy-pKa" userLabel="alertSwitch">
-                                <rect key="frame" x="184" y="190" width="51" height="31"/>
+                                <rect key="frame" x="184" y="146" width="51" height="31"/>
                                 <connections>
                                     <action selector="todoAlertSwitch:" destination="E41-EI-11u" eventType="valueChanged" id="hFw-Qq-aMg"/>
                                 </connections>
@@ -245,7 +254,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9sg-lZ-5cK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" shadowImage="navImge" id="kNV-vd-8Wx">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -272,11 +281,11 @@
             <objects>
                 <viewController id="5TM-5L-d0Y" customClass="EditItemViewController" customModule="Enhanced_To_Do" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8i8-oZ-W2s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6T-Lh-bmb">
-                                <rect key="frame" x="40" y="689" width="295" height="40"/>
+                                <rect key="frame" x="40" y="425" width="240" height="6"/>
                                 <color key="backgroundColor" red="0.04227787257" green="0.095460943189999994" blue="0.1607073282" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                                 <state key="normal" title="Update">
@@ -287,7 +296,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Vaz-vC-wzd">
-                                <rect key="frame" x="50" y="381" width="275" height="50"/>
+                                <rect key="frame" x="50" y="215" width="220" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPe-B2-Xph" userLabel="btn_green">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -301,7 +310,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ze-4H-u80" userLabel="btn_purple">
-                                        <rect key="frame" x="112.66666666666666" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="85" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="dmC-b3-msx"/>
                                             <constraint firstAttribute="width" constant="50" id="iwV-jD-aSK"/>
@@ -314,7 +323,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ete-D4-izo" userLabel="btn_orange">
-                                        <rect key="frame" x="225" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="170" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="54g-C5-26P"/>
                                             <constraint firstAttribute="height" constant="50" id="oYz-3L-OSJ"/>
@@ -327,13 +336,13 @@
                                 </subviews>
                             </stackView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="QGF-eS-b3D">
-                                <rect key="frame" x="40" y="461" width="295" height="120"/>
+                                <rect key="frame" x="40" y="295" width="240" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="8fd-cJ-aWg"/>
                                 </constraints>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDJ-2O-Ne9" userLabel="txt_item">
-                                <rect key="frame" x="40" y="251" width="295" height="30"/>
+                                <rect key="frame" x="40" y="90.5" width="240" height="24.5"/>
                                 <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
