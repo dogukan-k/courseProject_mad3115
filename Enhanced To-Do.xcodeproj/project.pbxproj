@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		123C559F2383DB770012F7AF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123C559E2383DB770012F7AF /* SettingsViewController.swift */; };
 		125DD833238323A700240637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125DD832238323A700240637 /* AppDelegate.swift */; };
 		125DD835238323A700240637 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125DD834238323A700240637 /* SceneDelegate.swift */; };
 		125DD837238323A700240637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125DD836238323A700240637 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		123C559E2383DB770012F7AF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		125DD82F238323A700240637 /* Enhanced To-Do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Enhanced To-Do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		125DD832238323A700240637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		125DD834238323A700240637 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		125DD84F238366F600240637 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				123C559E2383DB770012F7AF /* SettingsViewController.swift */,
 				125DD84B2383664D00240637 /* AddItemController.swift */,
 				125DD8492383631400240637 /* EditItemViewController.swift */,
 				125DD836238323A700240637 /* ViewController.swift */,
@@ -173,6 +176,7 @@
 			files = (
 				125DD84C2383664D00240637 /* AddItemController.swift in Sources */,
 				125DD837238323A700240637 /* ViewController.swift in Sources */,
+				123C559F2383DB770012F7AF /* SettingsViewController.swift in Sources */,
 				125DD83D238323A700240637 /* Enhanced_To_Do.xcdatamodeld in Sources */,
 				125DD84A2383631400240637 /* EditItemViewController.swift in Sources */,
 				125DD833238323A700240637 /* AppDelegate.swift in Sources */,

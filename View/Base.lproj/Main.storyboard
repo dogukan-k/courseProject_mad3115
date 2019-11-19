@@ -171,11 +171,65 @@
                         <outlet property="tableView" destination="00p-g2-8wy" id="qdF-os-95N"/>
                         <segue destination="6Pf-nj-fcR" kind="show" identifier="addItem" id="EGR-0r-8Sg"/>
                         <segue destination="5TM-5L-d0Y" kind="show" identifier="editItem" id="CYA-kI-BH8"/>
+                        <segue destination="E41-EI-11u" kind="show" identifier="settings" id="Jlp-53-Xih"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1039.2" y="135.96059113300493"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="97k-z7-zv9">
+            <objects>
+                <viewController id="E41-EI-11u" customClass="SettingsViewController" customModule="Enhanced_To_Do" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uht-bg-uDl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake Gesture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSV-fa-VmO">
+                                <rect key="frame" x="16" y="138" width="128" height="25"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JiT-JA-Wol" userLabel="shakeSwitch">
+                                <rect key="frame" x="184" y="135" width="51" height="31"/>
+                                <connections>
+                                    <action selector="shakeGestureSwitch:" destination="E41-EI-11u" eventType="valueChanged" id="PY3-tj-hB9"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To-Do Alert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsq-Y8-lol">
+                                <rect key="frame" x="16" y="193" width="98" height="25"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eSP-Iy-pKa" userLabel="alertSwitch">
+                                <rect key="frame" x="184" y="190" width="51" height="31"/>
+                                <connections>
+                                    <action selector="todoAlertSwitch:" destination="E41-EI-11u" eventType="valueChanged" id="hFw-Qq-aMg"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eSP-Iy-pKa" firstAttribute="top" secondItem="JiT-JA-Wol" secondAttribute="bottom" constant="24" id="1pp-xC-KAj"/>
+                            <constraint firstItem="eSP-Iy-pKa" firstAttribute="centerX" secondItem="JiT-JA-Wol" secondAttribute="centerX" id="6Ws-xT-uMf"/>
+                            <constraint firstItem="JiT-JA-Wol" firstAttribute="centerY" secondItem="jSV-fa-VmO" secondAttribute="centerY" id="8vk-Kd-9C6"/>
+                            <constraint firstItem="Lsq-Y8-lol" firstAttribute="leading" secondItem="uXi-XT-5OP" secondAttribute="leading" constant="16" id="978-0b-whl"/>
+                            <constraint firstItem="JiT-JA-Wol" firstAttribute="leading" secondItem="jSV-fa-VmO" secondAttribute="trailing" constant="40" id="Fsq-Dp-8f5"/>
+                            <constraint firstItem="jSV-fa-VmO" firstAttribute="top" secondItem="uXi-XT-5OP" secondAttribute="top" constant="50" id="XKv-q9-eG8"/>
+                            <constraint firstItem="eSP-Iy-pKa" firstAttribute="centerY" secondItem="Lsq-Y8-lol" secondAttribute="centerY" id="aje-Rn-yuy"/>
+                            <constraint firstItem="Lsq-Y8-lol" firstAttribute="top" secondItem="jSV-fa-VmO" secondAttribute="bottom" constant="30" id="eiO-df-FmB"/>
+                            <constraint firstItem="jSV-fa-VmO" firstAttribute="leading" secondItem="uXi-XT-5OP" secondAttribute="leading" constant="16" id="yYL-UN-bY7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uXi-XT-5OP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zc8-g4-2sF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cec-2j-5gM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2418" y="168"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EIf-Pq-46a">
