@@ -7,17 +7,29 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Item Controller-->
+        <!--Add Item-->
         <scene sceneID="xjs-2m-Ecw">
             <objects>
                 <viewController id="6Pf-nj-fcR" customClass="AddItemController" customModule="Enhanced_To_Do" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YFI-R3-Olh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="QmR-91-u0B">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QmR-91-u0B" secondAttribute="height" multiplier="40:27" id="FT7-Hj-upm"/>
+                                </constraints>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QmR-91-u0B" firstAttribute="centerY" secondItem="YFI-R3-Olh" secondAttribute="centerY" id="pMw-0p-bFL"/>
+                            <constraint firstItem="QmR-91-u0B" firstAttribute="centerX" secondItem="YFI-R3-Olh" secondAttribute="centerX" id="zrE-ek-B4U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="h0a-DW-GMJ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FMD-Jm-w9a"/>
+                    <navigationItem key="navigationItem" title="Add Item" id="FMD-Jm-w9a"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YsL-Ut-qLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,7 +73,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="To-Do" id="HO3-BT-U9d">
-                        <barButtonItem key="backBarButtonItem" title="To-Do" id="ybI-uu-Mmr"/>
+                        <barButtonItem key="backBarButtonItem" title="To-Do" id="2D8-rT-uDW"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eOq-Pz-SRv">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
@@ -76,17 +88,17 @@
             </objects>
             <point key="canvasLocation" x="1040.5797101449275" y="136.60714285714286"/>
         </scene>
-        <!--Edit Item View Controller-->
+        <!--To-Do Edit-->
         <scene sceneID="9wC-5x-EvP">
             <objects>
                 <viewController id="isf-Ze-GXP" customClass="EditItemViewController" customModule="Enhanced_To_Do" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eRd-ku-w7t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="FuW-lI-0KR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pDR-hD-pt0"/>
+                    <navigationItem key="navigationItem" title="To-Do Edit" id="pDR-hD-pt0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPn-CO-BxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
