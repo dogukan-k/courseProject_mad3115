@@ -29,6 +29,7 @@ class EditItemViewController: UIViewController {
         super.viewDidLoad()
         
         self.color = incomingItem!.strColor! ;
+        self.itemPriority = incomingItem!.priority ;
         
         if(incomingItem!.strColor == "00F900"){
              btnLow.blink();

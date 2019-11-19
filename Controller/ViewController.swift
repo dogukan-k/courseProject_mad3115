@@ -83,6 +83,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
      }
      
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+            let now = Date();
+        
            let cell = tableView.dequeueReusableCell(withIdentifier: "Item", for: indexPath);
                let item = itemsList[indexPath.row];
                
@@ -101,6 +104,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
                //Background color of cell is up to type of item
                cell.backgroundColor = UIColor.init(hexString: item.strColor!);
         
+        if(item.itemDate! < now && item.completed == false){
+            cell.backgroundColor = .red
+        }
             
                
                return cell ;
