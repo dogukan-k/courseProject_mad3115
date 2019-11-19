@@ -84,7 +84,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose priority(Green is the least important)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5X-cG-anO">
-                                <rect key="frame" x="16" y="150" width="288" height="17.5"/>
+                                <rect key="frame" x="4" y="150" width="312" height="17.5"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -94,7 +94,7 @@
                         <constraints>
                             <constraint firstItem="k5X-cG-anO" firstAttribute="top" secondItem="mQu-GY-cCx" secondAttribute="bottom" constant="35" id="4CY-7Q-VOD"/>
                             <constraint firstItem="RYM-Nz-57Y" firstAttribute="centerY" secondItem="YFI-R3-Olh" secondAttribute="centerY" id="79C-tz-Ztr"/>
-                            <constraint firstItem="h0a-DW-GMJ" firstAttribute="trailing" secondItem="k5X-cG-anO" secondAttribute="trailing" constant="16" id="BGu-8z-1rr"/>
+                            <constraint firstItem="h0a-DW-GMJ" firstAttribute="trailing" secondItem="k5X-cG-anO" secondAttribute="trailing" constant="4" id="BGu-8z-1rr"/>
                             <constraint firstItem="QmR-91-u0B" firstAttribute="leading" secondItem="h0a-DW-GMJ" secondAttribute="leading" constant="40" id="NhK-gR-tps"/>
                             <constraint firstItem="h0a-DW-GMJ" firstAttribute="trailing" secondItem="qHF-xs-gGw" secondAttribute="trailing" constant="40" id="Ojj-Hd-nlA"/>
                             <constraint firstItem="mQu-GY-cCx" firstAttribute="leading" secondItem="h0a-DW-GMJ" secondAttribute="leading" constant="40" id="OsL-VM-RVO"/>
@@ -107,7 +107,7 @@
                             <constraint firstItem="h0a-DW-GMJ" firstAttribute="bottom" secondItem="qHF-xs-gGw" secondAttribute="bottom" id="pPY-5a-ssT"/>
                             <constraint firstItem="qHF-xs-gGw" firstAttribute="leading" secondItem="h0a-DW-GMJ" secondAttribute="leading" constant="40" id="r9C-6M-4Mf"/>
                             <constraint firstItem="RYM-Nz-57Y" firstAttribute="leading" relation="lessThanOrEqual" secondItem="h0a-DW-GMJ" secondAttribute="leading" constant="50" id="sUl-SG-iYg"/>
-                            <constraint firstItem="k5X-cG-anO" firstAttribute="leading" secondItem="h0a-DW-GMJ" secondAttribute="leading" constant="16" id="x4N-of-k7f"/>
+                            <constraint firstItem="k5X-cG-anO" firstAttribute="leading" secondItem="h0a-DW-GMJ" secondAttribute="leading" constant="4" id="x4N-of-k7f"/>
                             <constraint firstItem="h0a-DW-GMJ" firstAttribute="trailing" secondItem="mQu-GY-cCx" secondAttribute="trailing" constant="40" id="zBD-DT-4om"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h0a-DW-GMJ"/>
@@ -254,7 +254,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9sg-lZ-5cK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" shadowImage="navImge" id="kNV-vd-8Wx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -352,11 +352,18 @@
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose priority(Green is the least important)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECb-Ek-UIo">
+                                <rect key="frame" x="4" y="150" width="312" height="17.5"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="MJc-aj-WQI" firstAttribute="trailing" secondItem="j6T-Lh-bmb" secondAttribute="trailing" constant="40" id="8FO-zP-TrR"/>
                             <constraint firstItem="Vaz-vC-wzd" firstAttribute="centerX" secondItem="8i8-oZ-W2s" secondAttribute="centerX" id="8nU-S5-SQQ"/>
+                            <constraint firstItem="ECb-Ek-UIo" firstAttribute="top" secondItem="EDJ-2O-Ne9" secondAttribute="bottom" constant="35" id="HIg-Xo-b1w"/>
                             <constraint firstItem="j6T-Lh-bmb" firstAttribute="leading" secondItem="MJc-aj-WQI" secondAttribute="leading" constant="40" id="HIs-G2-qwW"/>
                             <constraint firstItem="QGF-eS-b3D" firstAttribute="leading" secondItem="MJc-aj-WQI" secondAttribute="leading" constant="40" id="IaI-OQ-lyt"/>
                             <constraint firstItem="MJc-aj-WQI" firstAttribute="trailing" secondItem="EDJ-2O-Ne9" secondAttribute="trailing" constant="40" id="WHH-uF-cFo"/>
@@ -365,7 +372,9 @@
                             <constraint firstItem="QGF-eS-b3D" firstAttribute="top" secondItem="Vaz-vC-wzd" secondAttribute="bottom" constant="30" id="cgY-su-YAr"/>
                             <constraint firstItem="Vaz-vC-wzd" firstAttribute="leading" relation="lessThanOrEqual" secondItem="MJc-aj-WQI" secondAttribute="leading" constant="50" id="dC1-zN-Udp"/>
                             <constraint firstItem="MJc-aj-WQI" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Vaz-vC-wzd" secondAttribute="trailing" constant="50" id="fVR-ap-8Ok"/>
+                            <constraint firstItem="ECb-Ek-UIo" firstAttribute="leading" secondItem="MJc-aj-WQI" secondAttribute="leading" constant="4" id="fyY-A7-0tP"/>
                             <constraint firstItem="j6T-Lh-bmb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QGF-eS-b3D" secondAttribute="bottom" constant="10" id="iFO-ex-Eof"/>
+                            <constraint firstItem="MJc-aj-WQI" firstAttribute="trailing" secondItem="ECb-Ek-UIo" secondAttribute="trailing" constant="4" id="izA-Tr-bLf"/>
                             <constraint firstItem="Vaz-vC-wzd" firstAttribute="top" secondItem="EDJ-2O-Ne9" secondAttribute="bottom" constant="100" id="nN5-Kr-w0u"/>
                             <constraint firstItem="Vaz-vC-wzd" firstAttribute="centerY" secondItem="8i8-oZ-W2s" secondAttribute="centerY" id="qnc-8v-cYF"/>
                             <constraint firstItem="MJc-aj-WQI" firstAttribute="bottom" secondItem="j6T-Lh-bmb" secondAttribute="bottom" id="vV2-RL-arU"/>
