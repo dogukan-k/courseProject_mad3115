@@ -28,7 +28,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         // Do any additional setup after loading the view.
         
         
-      
+    // Detect app on foreground from background
+      let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
        
     }
     
@@ -39,6 +41,14 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         itemsList.sort { $0.priority > $1.priority }
         tableView.reloadData();
     }
+    
+   
+   
+//    /Detect app on foreground from background
+    @objc func appMovedToForeground() {
+    tableView.reloadData();
+    }
+    
     
     //Convert the boolean value to opposite  and save
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
