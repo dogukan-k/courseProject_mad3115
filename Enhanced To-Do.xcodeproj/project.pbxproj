@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1225BD882386F9F100144367 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1225BD862386F9F100144367 /* success.mp3 */; };
+		1225BD892386F9F100144367 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1225BD872386F9F100144367 /* click.wav */; };
 		123C559F2383DB770012F7AF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123C559E2383DB770012F7AF /* SettingsViewController.swift */; };
 		125DD833238323A700240637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125DD832238323A700240637 /* AppDelegate.swift */; };
 		125DD835238323A700240637 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125DD834238323A700240637 /* SceneDelegate.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1225BD862386F9F100144367 /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
+		1225BD872386F9F100144367 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
 		123C559E2383DB770012F7AF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		125DD82F238323A700240637 /* Enhanced To-Do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Enhanced To-Do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		125DD832238323A700240637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 				125DD84E238366F200240637 /* View */,
 				125DD831238323A700240637 /* Enhanced To-Do */,
 				125DD830238323A700240637 /* Products */,
+				1225BD872386F9F100144367 /* click.wav */,
+				1225BD862386F9F100144367 /* success.mp3 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +169,8 @@
 			files = (
 				125DD842238323A700240637 /* LaunchScreen.storyboard in Resources */,
 				125DD83F238323A700240637 /* Assets.xcassets in Resources */,
+				1225BD892386F9F100144367 /* click.wav in Resources */,
+				1225BD882386F9F100144367 /* success.mp3 in Resources */,
 				125DD83A238323A700240637 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

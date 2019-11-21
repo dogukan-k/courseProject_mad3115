@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class EditItemViewController: UIViewController , UITextFieldDelegate{
 
@@ -22,9 +23,11 @@ class EditItemViewController: UIViewController , UITextFieldDelegate{
     var itemPriority:Double = 0;
     
     
-     var incomingItem : Items? = nil
+    var incomingItem : Items? = nil
     var color = "";
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext ;
+    var successAudioPlyr = AVAudioPlayer() ;
+    var clickAudioPlyr = AVAudioPlayer() ;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +38,9 @@ class EditItemViewController: UIViewController , UITextFieldDelegate{
                self.txtField.delegate = self;
         
         
-        btnUpdate.layer.cornerRadius = 8 
+        btnUpdate.layer.cornerRadius = 8
+        
+
        
         
         self.color = incomingItem!.strColor! ;
@@ -57,6 +62,24 @@ class EditItemViewController: UIViewController , UITextFieldDelegate{
         txtField.text = incomingItem!.name;
         datePicker.date = incomingItem!.itemDate!;
         
+        
+        let successSound  = Bundle.main.path(forResource: "success", ofType: "mp3");
+                    
+                     do {
+                        successAudioPlyr = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: successSound ?? ""))
+                           } catch {
+                               print("File not reachable")
+                           }
+
+        let clickSound  = Bundle.main.path(forResource: "click", ofType: "wav");
+                    
+                     do {
+                        clickAudioPlyr = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: clickSound ?? ""))
+                           } catch {
+                               print("File not reachable")
+                           }
+        
+        
     }
     
        @IBAction func btnLowPriority(_ sender: UIButton) {
@@ -67,6 +90,7 @@ class EditItemViewController: UIViewController , UITextFieldDelegate{
                
                itemPriority = 1 ;
                color = "00F900"
+        clickAudioPlyr.play()
     }
     
     @IBAction func btnMidPriority(_ sender: UIButton) {
@@ -77,6 +101,7 @@ class EditItemViewController: UIViewController , UITextFieldDelegate{
              
              itemPriority = 2 ;
              color = "7A81FF"
+         clickAudioPlyr.play()
         
     }
     
@@ -88,6 +113,7 @@ class EditItemViewController: UIViewController , UITextFieldDelegate{
               
               itemPriority = 3 ;
               color = "FF9300"
+         clickAudioPlyr.play()
         
     }
     
@@ -115,6 +141,7 @@ class EditItemViewController: UIViewController , UITextFieldDelegate{
         self.saveItems();
         alertSuccesful.addAction(ok);
         present(alertSuccesful, animated: true, completion: nil);
+        successAudioPlyr.play();
         
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class AddItemController: UIViewController , UITextFieldDelegate{
     
@@ -21,7 +22,10 @@ class AddItemController: UIViewController , UITextFieldDelegate{
       var itemPriority:Double = 1;
       var color = "00F900";
     
-
+    var successAudioPlyr = AVAudioPlayer() ;
+    var clickAudioPlyr = AVAudioPlayer() ;
+    
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext ;
     
 
@@ -32,8 +36,23 @@ class AddItemController: UIViewController , UITextFieldDelegate{
         view.addGestureRecognizer(tapGesture);
         
         self.txtField.delegate = self;
-        btnSave.layer.cornerRadius = 8
+       // btnSave.layer.cornerRadius = 8
+        
+        let successSound  = Bundle.main.path(forResource: "success", ofType: "mp3");
+              
+               do {
+                  successAudioPlyr = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: successSound ?? ""))
+                     } catch {
+                         print("File not reachable")
+                     }
 
+        let clickSound  = Bundle.main.path(forResource: "click", ofType: "wav");
+              
+               do {
+                  clickAudioPlyr = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: clickSound ?? ""))
+                     } catch {
+                         print("File not reachable")
+                     }
         // Do any additional setup after loading the view.
     }
     
@@ -45,6 +64,9 @@ class AddItemController: UIViewController , UITextFieldDelegate{
                
                itemPriority = 1 ;
                color = "00F900"
+                
+               clickAudioPlyr.play()
+        
     }
     
     @IBAction func btnMidPriority(_ sender: UIButton) {
@@ -56,6 +78,8 @@ class AddItemController: UIViewController , UITextFieldDelegate{
              itemPriority = 2 ;
              color = "7A81FF"
         
+             clickAudioPlyr.play()
+        
     }
     
     @IBAction func btnHighPriority(_ sender: UIButton) {
@@ -66,6 +90,7 @@ class AddItemController: UIViewController , UITextFieldDelegate{
               
               itemPriority = 3 ;
               color = "FF9300"
+              clickAudioPlyr.play()
         
     }
     
@@ -102,6 +127,7 @@ class AddItemController: UIViewController , UITextFieldDelegate{
             
                  alertSuccesful.addAction(ok);
                  present(alertSuccesful, animated: true, completion: nil);
+                 successAudioPlyr.play();
           
                  
              }
