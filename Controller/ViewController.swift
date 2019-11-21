@@ -27,6 +27,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        
       
        
     }
@@ -34,6 +35,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     //Order the itemlist according to their priority
     override func viewWillAppear(_ animated: Bool) {
         loadItems() ;
+        itemListCountBeforeDeleting = itemsList.count;
         itemsList.sort { $0.priority > $1.priority }
         tableView.reloadData();
     }
@@ -81,6 +83,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
           return itemsList.count;
      }
      
@@ -117,8 +120,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     //When swipe cell , roundstyle gone so , swipped cell should be reloaded at the end of editing if not deleted
     func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        
         if(itemListCountBeforeDeleting == itemsList.count){
-            
+     
               tableView.reloadRows(at: [indexPath!], with: .none)
         }
       
